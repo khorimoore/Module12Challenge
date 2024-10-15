@@ -62,7 +62,7 @@ To get a local copy up and running, follow these steps:
 To deploy this project to **Netlify**:
 
 1. Push the project to a GitHub repository.
-2. Go to [Netlify](https://www.netlify.com/) and sign in.
+2. Go to [Netlify](https://app.netlify.com/sites/bucolic-taiyaki-aafe6a/deploys/670e0717e95b53eae941a2a5/) and sign in.
 3. Click "New Site from Git."
 4. Connect your GitHub repository and select the branch (typically `main`).
 5. Netlify will automatically build and deploy your application.
