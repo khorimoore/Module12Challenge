@@ -1,201 +1,112 @@
 body {
-  font-family: 'Bebas Neue', sans-serif;
-  background-color: #f8f9fa; /* Light mode background */
-  color: #000; /* Light mode text color */
-  transition: all 0.5s ease;
+  font-family: 'Roboto Mono', monospace; /* Military typewriter styled font */
+  background-color: #2A2C2B;
+  color: #EDEDED;
 }
 
-h1, h2, h3 {
-  font-family: 'Rajdhani', sans-serif;
-  transition: all 0.5s ease;
+.navbar {
+  background-color: #1A1A1D;
 }
 
-/* Light Mode */
-body {
-  background-color: #f8f9fa; /* Light background */
-  color: #000;
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nav-link {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+header {
+  background: #0F0F0F;
+  color: #EDEDED;
+  padding: 80px 0;
+}
+
+h1, h2 {
+  font-family: 'Roboto Mono', monospace;
 }
 
 h1 {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9); /* White glow in light mode */
+  font-weight: 700;
 }
 
-h2, h3 {
-  color: #000000;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #181818; /* Dark mode background */
-  color: #ffffff; /* Dark mode text */
-}
-
-body.dark-mode h1 {
-  color: #00aaff; /* Blue glow in dark mode */
-  text-shadow: 0 0 10px rgba(0, 170, 255, 0.9);
-}
-
-body.dark-mode h2, body.dark-mode h3 {
-  color: #ffffff;
-}
-
-/* Header and Navigation */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-}
-
-nav a {
-  margin: 0 15px;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #00aaff;
-}
-
-/* Project Section */
-#projects {
-  display: flex;
-  justify-content: space-around;
-  margin: 40px 0;
-  padding: 20px;
+h2 {
+  font-weight: 400;
 }
 
 .project-card {
-  width: 22%;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Hover effect enlarges the card */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
 }
 
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.card-body h5 {
+  font-weight: 700;
+  color: #FFF500; /* Yellowish military-style color */
 }
 
-.project-card .description {
-  margin-top: 15px;
+.card-body .description {
+  display: none;
+  font-size: 14px;
+  color: #FFF;
 }
 
-.project-card h3 {
-  font-size: 1.5em;
-  margin: 10px 0;
+.project-card:hover .description {
+  display: block;
 }
 
-.project-card p {
-  font-size: 1em;
-  color: #777;
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
 
-/* Contact Form */
-form {
-  margin: 20px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
+section {
+  padding: 40px 0;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  font-size: 1.2em;
-  color: #333;
-}
-
-.form-group input, .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button[type="submit"] {
-  padding: 10px 15px;
-  border: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #00aaff;
-}
-
-/* Dark Mode Specific Form Styles */
-body.dark-mode form {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode .form-group input, body.dark-mode .form-group textarea {
-  background-color: #555;
-  color: #fff;
-  border: 1px solid #444;
-}
-
-body.dark-mode button[type="submit"] {
-  background-color: #00aaff;
-}
-
-/* Toggle Button */
-.toggle-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.toggle-btn:focus {
-  outline: none;
-}
-
-.toggle-btn:hover {
-  background-color: #00aaff;
-}
-
-/* Footer */
-footer {
-  margin-top: 40px;
+#portfolio h2 {
+  font-size: 2.5rem;
   text-align: center;
+  margin-bottom: 40px;
+  color: #FFF500;
+}
+.contact-section {
+  width: 28%; /* Adjust width for contact */
+  background-color: #1f1f1f;
   padding: 20px;
-  background-color: #333;
-  color: white;
+  border-radius: 8px;
+  color: #fff;
 }
 
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
-  #projects {
-      flex-direction: column;
-      align-items: center;
-  }
+.contact-section h3 {
+  color: #33aaff;
+}
 
-  .project-card {
-      width: 90%;
-      margin-bottom: 20px;
-  }
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.contact-section button {
+  background-color: #33aaff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #0088ff;
 }
