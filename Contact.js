@@ -1,23 +1,34 @@
 import React from 'react';
+import { Container, Form, Button } from 'react-bootstrap';
 
-function Contact() {
+const Contact = () => {
   return (
-    <section>
-      <h1>Contact Me</h1>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    <section id="contact" className="bg-dark text-light py-5">
+      <Container>
+        <h2 className="section-title text-center text-warning mb-4">Contact Us</h2>
+        <Form>
+          <Form.Group controlId="formName">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter your name" />
+          </Form.Group>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter your email" />
+          </Form.Group>
 
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+          <Form.Group controlId="formMessage">
+            <Form.Label>Message</Form.Label>
+            <Form.Control as="textarea" rows={4} placeholder="Enter your message" />
+          </Form.Group>
 
-        <button type="submit">Send</button>
-      </form>
+          <Button variant="warning" type="submit">
+            Send Message
+          </Button>
+        </Form>
+      </Container>
     </section>
   );
-}
+};
 
-export default Contact; 
+export default Contact;

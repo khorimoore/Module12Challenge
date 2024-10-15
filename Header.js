@@ -1,19 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li><Link to="/">About Me</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-        </ul>
-      </nav>
-    </header>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="/">MOORETEC</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Link href="#about">About</Nav.Link>
+          <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+          <Nav.Link href="#contact">Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-}
+};
 
-export default Header;  
+export default Header;
